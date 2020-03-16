@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lnrContainer"
+        style="@style/createPostItem"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                style="@style/cpTextViewTitle"
+                android:layout_toRightOf="@+id/rltContainer"
+                android:text="متراژ" />
+
+            <RelativeLayout
+                android:id="@+id/rltContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="center">
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/txtUnit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="15"
+                android:gravity="center"
+                android:text="متر"
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/postTextSize"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edtInput"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="85"
+                android:background="@color/backgroundColor"
+                android:ems="10"
+                android:gravity="center"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/postTextSize" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

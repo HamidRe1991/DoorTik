@@ -1,0 +1,293 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:fontFamily">@font/font_family</item>
+        <item name="android:statusBarColor" tools:targetApi="LOLLIPOP">@color/colorAccent</item>
+    </style>
+
+    <!-- Dialog -->
+    <style name="Dialog" parent="Base.Theme.AppCompat.Light.Dialog">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/font_family</item>
+    </style>
+
+    <!-- Bottom Navigation -->
+    <style name="NavigationViewOwnStyle">
+        <item name="android:textSize">@dimen/bottomNavigationSize</item>
+    </style>
+
+    <!-- Authorize Page -->
+    <style name="authorizeErrorLinearLayout">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="authorizeErrorTextView">
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textSize">@dimen/LoginTitleTextSize</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="authorizeErrorImageView">
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_width">25dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:tint">@color/error</item>
+    </style>
+
+    <!-- Tools Page -->
+    <style name="toolsLnrRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">85dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="toolsLnrHoldToolsItems">
+        <item name="android:gravity">center</item>
+        <item name="android:weightSum">100</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/selector_white_blue</item>
+    </style>
+
+    <style name="toolsImgTools">
+        <item name="android:padding">13dp</item>
+    </style>
+
+    <style name="toolsTxtTools">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/darkGray</item>
+        <item name="android:textSize">@dimen/toolsTextSize</item>
+        <item name="android:layout_marginBottom">3dp</item>
+    </style>
+
+    <!-- Profile Page -->
+    <style name="profileTextView">
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textSize">@dimen/profileItemTextSize</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="profileLinearLayout">
+        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:background">@drawable/profile_item_background</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="profileLinearRequest">
+        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:background">@drawable/profile_request_background</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="profileImageView">
+        <item name="android:layout_height">55dp</item>
+        <item name="android:layout_width">55dp</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <!-- Location -->
+    <style name="locationLinearLayout">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="locationTextView">
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textSize">@dimen/registerTitleTextSize</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="locationImageView">
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_width">18dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:tint">@color/error</item>
+    </style>
+
+    <!-- Select Image Page -->
+    <style name="cpTextViewTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">@dimen/postTextSize</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="cpDialogTextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textColor">@color/darkGray</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/selector_white_blue</item>
+        <item name="android:textSize">@dimen/profileItemTextSize</item>
+    </style>
+
+    <!--Create Post Page-->
+    <style name="createPostItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="AppSpinnerDropDownItem" parent="Base.Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:background">@drawable/selector_spinner</item>
+        <item name="android:divider">@color/liteGray</item>
+    </style>
+
+    <style name="radioButtonStyle" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textSize">@dimen/profileItemTextSize</item>
+        <item name="android:button">@drawable/selector_radio_button</item>
+    </style>
+
+    <style name="checkBoxStyle" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@null</item>
+        <item name="android:drawableRight">@drawable/selector_check_box</item>
+    </style>
+
+    <style name="circleStyle" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@null</item>
+        <item name="android:drawableRight">@drawable/selector_circle</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <!--Seller-->
+    <style name="selLinearLayout">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="selTextView">
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textSize">@dimen/profileItemTextSize</item>
+        <item name="android:textColor">@color/darkGray</item>
+    </style>
+
+    <style name="selImageView">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">30dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:tint">@color/colorAccent</item>
+    </style>
+
+    <!--Row-->
+    <style name="rowLinearLayout">
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="rowTextView">
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textSize">@dimen/rowTextSize</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="rowImageView">
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_width">20dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:tint">@color/colorAccent</item>
+    </style>
+
+    <style name="rowDelete">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">25dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:tint">@color/colorAccent</item>
+        <item name="android:layout_gravity">center_vertical|right</item>
+    </style>
+
+    <style name="rowEdit">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:layout_gravity">center_vertical|left</item>
+    </style>
+
+    <!--Filter Page-->
+    <style name="filterRadioButton" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/selector_radio_button</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textColor">#373737</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--Calculator Page-->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

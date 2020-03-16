@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/rltAuth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/imgVector"
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:src="@drawable/vector" />
+
+            <TextView
+                android:id="@+id/tvAuthTell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgVector"
+                android:gravity="center"
+                android:text="کد تایید را وارد نمایید"
+                android:textSize="@dimen/LoginTitleTextSize" />
+
+            <RelativeLayout
+                android:id="@+id/rtlPinCode"
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:layout_below="@id/tvAuthTell"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/otp_back">
+
+                <com.alimuzaffar.lib.pin.PinEntryEditText
+                    android:id="@+id/edtPinCode"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:cursorVisible="false"
+                    android:digits="1234567890"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textColor="@color/textColor"
+                    android:textIsSelectable="false"
+                    android:textSize="@dimen/LoginInputTextSize"
+                    app:pinAnimationType="popIn"
+                    app:pinBackgroundIsSquare="true"
+                    app:pinLineStrokeSelected="0.9dp" >
+                </com.alimuzaffar.lib.pin.PinEntryEditText>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvResend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rtlPinCode"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="ارسال مجدد"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/LoginTitleTextSize" />
+
+            <LinearLayout
+                android:id="@+id/lnrError"
+                style="@style/authorizeErrorLinearLayout"
+                android:layout_below="@id/tvResend"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/authorizeErrorTextView"
+                    android:text="کد وارد شده صحیح نمی باشد"
+                    android:textColor="@color/error" />
+
+                <ImageView
+                    style="@style/authorizeErrorImageView"
+                    app:srcCompat="@drawable/ic_error_outline_white_48dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lnrContainer"
+        style="@style/createPostItem"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imgHelp"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_action_bulb" />
+
+            <TextView
+                android:id="@+id/txtTitle"
+                style="@style/cpTextViewTitle"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/imgHelp"
+                android:inputType="text"
+                android:text="نام" />
+        </RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/edtInput"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/backgroundColor"
+            android:ems="10"
+            android:gravity="right|center_vertical"
+            android:inputType="textMultiLine"
+            android:maxLength="50"
+            android:paddingRight="10dp"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/postTextSize"/>
+
+    </LinearLayout>
+
+</LinearLayout>

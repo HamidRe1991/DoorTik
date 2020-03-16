@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">@color/mainColor</color>
+    <color name="colorPrimaryDark">@color/mainColor</color>
+    <color name="colorAccent">#004f49</color>
+
+    <color name="mainColor">#016257</color>
+    <color name="green">#00d65e</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#EFEFEF</color>
+    <color name="backgroundColor">#f0f0f0</color>
+    <color name="error">#ff5151</color>
+    <color name="darkGray">#58595b</color>
+    <color name="textColor">#a5a5a5</color>
+    <color name="blueLight">#a1f4ff</color>
+    <color name="editTextBackground">#f6f6f6</color>
+    <color name="liteGray">#dedede</color>
+
+    <color name="type1">#8B4B62</color>
+    <color name="type2">#EA9674</color>
+    <color name="type3">#FF5A65</color>
+    <color name="type4">#84AF9C</color>
+    <color name="type5">#79C6D2</color>
+    <color name="type6">#B788B4</color>
+
+    <color name="type_expire">#797979</color>
+
+    <color name="calenderColor">#dedede</color>
+
+    <color name="toggleCheck">@color/mainColor</color>
+    <color name="toggleUnCheck">#868686</color>
+
+    <color name="yellow">#e7e35f</color>
+
+</resources>

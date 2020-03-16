@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.smr.estate">
+
+    <!-- Permission Set -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <!-- Feature Set -->
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.screen.landscape" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:name=".Application.G"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="supportsRtl">
+
+        <!-- Launcher activity -->
+        <activity
+            android:name=".Activities.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Main activity -->
+        <activity
+            android:name=".Activities.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Activities.AuthActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Activities.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Activities.CreatePostActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Activities.UpdateProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Activities.DetailPostActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- Dialog Activity -->
+        <activity
+            android:name=".Dialog.SelectStateActivity"
+            android:theme="@style/Dialog"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Dialog.SelectCategoryActivity"
+            android:theme="@style/Dialog" />
+        <activity
+            android:name=".Dialog.SelectAreaActivity"
+            android:theme="@style/Dialog" />
+        <activity
+            android:name=".Dialog.FilterActivity"
+            android:theme="@style/Dialog"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Dialog.SellerActivity"
+            android:theme="@style/Dialog" />
+        <activity
+            android:name=".Dialog.ArchiveActivity"
+            android:theme="@style/Dialog"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Dialog.BuyCredit"
+            android:theme="@style/Dialog" />
+        <activity
+            android:name=".Dialog.BuyCoin"
+            android:theme="@style/Dialog" />
+        <activity
+            android:name=".Dialog.OfferActivity"
+            android:theme="@style/Dialog" />
+
+        <!-- Tools Activity -->
+        <activity
+            android:name=".Tools.Align"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Tools.Calculator"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Tools.RSS"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Tools.FlashLight"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Tools.Financial"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Tools.Calender"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Tools.ShowNote"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Tools.CreateNote"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".Tools.Calculators.History"
+            android:screenOrientation="portrait" />
+
+        <!-- Maps Activity -->
+        <activity
+            android:name=".Dialog.MapsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Dialog.ShowMapsActivity"
+            android:screenOrientation="portrait" />
+        <!-- broadCastReciver -->
+        <receiver android:name=".Activities.BroadCastReciver">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".Activities.ShowConsListOfStates"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <include layout="@layout/view_toolbar_update_profile" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/rtlUpdateProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgUpdateProfile"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/register_profile" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/update_select_profile" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvUpdateCity"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/rtlUpdateProfile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_full_background"
+                android:gravity="center_vertical|right"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="استان *"
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/registerInputTextSize" />
+
+            <EditText
+                android:id="@+id/edtUpdateName"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/tvUpdateCity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_full_background"
+                android:gravity="center_vertical|right"
+                android:hint="نام دفتر املاک *"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/registerInputTextSize" />
+
+            <EditText
+                android:id="@+id/edtUpdateEmail"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/edtUpdateName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center_vertical|left"
+                android:hint="آدرس ایمیل"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/registerInputTextSize" />
+
+            <EditText
+                android:id="@+id/edtUpdateTell"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/edtUpdateEmail"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center_vertical|left"
+                android:hint="شماره تماس ثابت"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/registerInputTextSize" />
+
+            <EditText
+                android:id="@+id/edtUpdateAddress"
+                android:layout_width="200dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/edtUpdateTell"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_full_background"
+                android:gravity="center_vertical|right"
+                android:hint="آدرس *"
+                android:inputType="textMultiLine"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/registerInputTextSize" />
+            <EditText
+                android:id="@+id/edtRegisterPass"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/edtUpdateAddress"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center_vertical|left"
+                android:hint="رمز عبور"
+                android:maxLength="11"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/registerInputTextSize" />
+
+            <LinearLayout
+                android:id="@+id/lnrUpdateLocation"
+                style="@style/locationLinearLayout"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtRegisterPass"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/linear_update_location_background"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvUpdateLoc"
+                    style="@style/locationTextView"
+                    android:text="لوکیشن خود را تغییر دهید"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    style="@style/locationImageView"
+                    android:background="@drawable/location"
+                    android:backgroundTint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrUpdateNum"
+                style="@style/locationLinearLayout"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lnrUpdateLocation"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/linear_update_location_background"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvUpdateNum"
+                    style="@style/locationTextView"
+                    android:text="تصویر جواز خود را آپلود کنید"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    style="@style/locationImageView"
+                    android:background="@drawable/location"
+                    android:backgroundTint="@color/white" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorUpdateProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

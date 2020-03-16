@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".Tools.Financial">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/mainColor"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/tvToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical|right"
+            android:text="دستیار مالی"
+            android:textColor="@color/white"
+            android:textSize="@dimen/toolbarTextSize" />
+
+        <ImageView
+            android:id="@+id/imgFinancialBack"
+            android:layout_width="?actionBarSize"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/selector_blue_lite_blue"
+            android:clickable="true"
+            android:padding="14dp"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_arrow_back" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize">
+
+        <RadioGroup
+            android:id="@+id/rdbGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingRight="8dp">
+
+            <RadioButton
+                android:id="@+id/rdbConvert"
+                style="@style/radioButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:checked="true"
+                android:gravity="right|center_vertical"
+                android:text="تبدیل رهن و اجاره"
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/financialTextSize" />
+
+            <RadioButton
+                android:id="@+id/rdbCommission"
+                style="@style/radioButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="right|center_vertical"
+                android:text="محاسبه کمیسیون"
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/financialTextSize" />
+
+        </RadioGroup>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rdbGroup">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/lnrConvert"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center"
+                                android:text="رهن و اجاره ی مبنا"
+                                android:textSize="@dimen/financialTextSize" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <wiadevelopers.com.library.MaskdEditText.MaskedEditText xmlns:mask="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/edtRealMortgage"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center"
+                                    android:inputType="phone"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="@dimen/financialTextSize"
+                                    mask:mask="### ### ### ### ###" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center"
+                                    android:text="مبلغ رهن(تومان): "
+                                    android:textSize="@dimen/financialTextSize" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <wiadevelopers.com.library.MaskdEditText.MaskedEditText xmlns:mask="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/edtRealRent"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center"
+                                    android:inputType="phone"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="@dimen/financialTextSize"
+                                    mask:mask="### ### ### ### ###" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center"
+                                    android:text="مبلغ اجاره(تومان): "
+                                    android:textSize="@dimen/financialTextSize" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:gravity="center"
+                                android:text="رهن و اجاره ی مورد نظر"
+                                android:textSize="@dimen/financialTextSize" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <wiadevelopers.com.library.MaskdEditText.MaskedEditText xmlns:mask="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/edtMortgage"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center"
+                                    android:inputType="phone"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="@dimen/financialTextSize"
+                                    mask:mask="### ### ### ### ###" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center"
+                                    android:text="مبلغ رهن(تومان): "
+                                    android:textSize="@dimen/financialTextSize" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <wiadevelopers.com.library.MaskdEditText.MaskedEditText xmlns:mask="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/edtRent"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center"
+                                    android:inputType="phone"
+                                    android:textColor="@color/textColor"
+                                    android:textSize="@dimen/financialTextSize"
+                                    mask:mask="### ### ### ### ###" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center"
+                                    android:text="مبلغ اجاره(تومان): "
+                                    android:textSize="@dimen/financialTextSize" />
+
+                            </LinearLayout>
+
+                            <android.support.v7.widget.AppCompatButton
+                                android:id="@+id/btnConvert"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/selector_white_blue"
+                                android:text="محاسبه"
+                                android:textSize="@dimen/financialTextSize" />
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnrCommission"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:paddingRight="8dp">
+
+                                <RadioButton
+                                    android:id="@+id/rdbMortgage"
+                                    style="@style/radioButtonStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:checked="true"
+                                    android:gravity="right|center_vertical"
+                                    android:text="رهن و اجاره"
+                                    android:textColor="@color/darkGray"
+                                    android:textSize="@dimen/financialTextSize" />
+
+                                <RadioButton
+                                    android:id="@+id/rdbSale"
+                                    style="@style/radioButtonStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:gravity="right|center_vertical"
+                                    android:text="خرید و فروش"
+                                    android:textColor="@color/darkGray"
+                                    android:textSize="@dimen/financialTextSize" />
+
+                            </RadioGroup>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/rdbGroup">
+
+                                <LinearLayout
+                                    android:id="@+id/lnrRent"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentTop="true"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+                                    <android.support.v7.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:weightSum="1">
+
+                                                <wiadevelopers.com.library.MaskdEditText.MaskedEditText xmlns:mask="http://schemas.android.com/apk/res-auto"
+                                                    android:id="@+id/edtRentMortgage"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginRight="10dp"
+                                                    android:layout_weight="0.5"
+                                                    android:gravity="center"
+                                                    android:inputType="phone"
+                                                    android:textColor="@color/textColor"
+                                                    android:textSize="@dimen/financialTextSize"
+                                                    mask:mask="### ### ### ### ###" />
+
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="0.5"
+                                                    android:gravity="center"
+                                                    android:text="مبلغ رهن(تومان): "
+                                                    android:textSize="@dimen/financialTextSize" />
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="20dp"
+                                                android:orientation="horizontal"
+                                                android:weightSum="1">
+
+                                                <wiadevelopers.com.library.MaskdEditText.MaskedEditText xmlns:mask="http://schemas.android.com/apk/res-auto"
+                                                    android:id="@+id/edtRentRent"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginRight="10dp"
+                                                    android:layout_weight="0.5"
+                                                    android:gravity="center"
+                                                    android:inputType="phone"
+                                                    android:textColor="@color/textColor"
+                                                    android:textSize="@dimen/financialTextSize"
+                                                    mask:mask="### ### ### ### ###" />
+
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="0.5"
+                                                    android:gravity="center"
+                                                    android:text="مبلغ اجاره(تومان): "
+                                                    android:textSize="@dimen/financialTextSize" />
+
+                                            </LinearLayout>
+
+                                            <android.support.v7.widget.AppCompatButton
+                                                android:id="@+id/btnSubmitRent"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/selector_white_blue"
+                                                android:text="محاسبه"
+                                                android:textSize="@dimen/financialTextSize" />
+
+                                        </LinearLayout>
+
+                                    </android.support.v7.widget.CardView>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/lnrSale"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentTop="true"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <android.support.v7.widget.CardView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical"
+                                            android:weightSum="1">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal"
+                                                android:weightSum="1">
+
+                                                <wiadevelopers.com.library.MaskdEditText.MaskedEditText xmlns:mask="http://schemas.android.com/apk/res-auto"
+                                                    android:id="@+id/edtSale"
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="10dp"
+                                                    android:layout_marginRight="10dp"
+                                                    android:layout_weight="0.5"
+                                                    android:gravity="center"
+                                                    android:inputType="phone"
+                                                    android:textColor="@color/textColor"
+                                                    android:textSize="@dimen/financialTextSize"
+                                                    mask:mask="### ### ### ### ###" />
+
+                                                <TextView
+                                                    android:layout_width="0dp"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="0.5"
+                                                    android:gravity="center"
+                                                    android:text="مبلغ معامله: "
+                                                    android:textSize="@dimen/financialTextSize" />
+
+                                            </LinearLayout>
+
+                                            <android.support.v7.widget.AppCompatButton
+                                                android:id="@+id/btnSubmitSale"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/selector_white_blue"
+                                                android:text="محاسبه"
+                                                android:textSize="@dimen/financialTextSize" />
+
+                                        </LinearLayout>
+
+                                    </android.support.v7.widget.CardView>
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorFinancial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

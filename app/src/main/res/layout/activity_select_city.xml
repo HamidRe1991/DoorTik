@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/txtToolbarTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:gravity="right"
+        android:text="انتخاب استان"
+        android:textColor="@color/mainColor"
+        android:textSize="@dimen/cityTitleTextSize" />
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtToolbarTitle"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/text_field_activated_holo_light"
+        android:drawableRight="@drawable/ic_png_search"
+        android:drawableTint="@color/mainColor"
+        android:gravity="right|center_vertical"
+        android:hint="جستجوی استان ..."
+        android:imeOptions="actionSend|flagNoEnterAction"
+        android:inputType="textPersonName"
+        android:paddingRight="8dp"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/cityInputTextSize" />
+
+    <ListView
+        android:id="@+id/lstCities"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/edtSearch" />
+
+</RelativeLayout>

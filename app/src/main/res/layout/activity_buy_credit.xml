@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".Dialog.BuyCredit">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvOne"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/buy_item_background"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="بسته 15 روزه (200 دربن)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/buyItemTextSize" />
+
+        <TextView
+            android:id="@+id/tvTwo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/buy_item_background"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="بسته 30 روزه (400 دربن)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/buyItemTextSize" />
+
+        <TextView
+            android:id="@+id/tvThree"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/buy_item_background"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="بسته 90 روزه (1000 دربن)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/buyItemTextSize" />
+
+        <TextView
+            android:id="@+id/tvFour"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/buy_item_background"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="بسته 180 روزه (1800 دربن)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/buyItemTextSize" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:textSize="@dimen/buyTitleTextSize"
+            android:text="دریافت زمان ثبت آگهی"
+            android:textColor="@color/mainColor" />
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinatorCredit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</LinearLayout>

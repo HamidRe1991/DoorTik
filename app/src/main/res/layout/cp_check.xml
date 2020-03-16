@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lnrContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/chk"
+            style="@style/circleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_box_background"
+            android:gravity="center|center_vertical"
+            android:padding="5dp"
+            android:text="CheckBox"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/postTextSize" />
+
+    </LinearLayout>
+
+</LinearLayout>

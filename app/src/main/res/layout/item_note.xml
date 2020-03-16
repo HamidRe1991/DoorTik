@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/crdRoot"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical"
+    card_view:cardPreventCornerOverlap="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/imgPic"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="3dp">
+
+            <TextView
+                android:id="@+id/tvNoteText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:maxLines="2"
+                android:text="عنوان"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/eventTextSize" />
+
+            <LinearLayout
+                android:id="@+id/lnrTime"
+                style="@style/rowLinearLayout"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tvNoteTime"
+                    style="@style/rowTextView"
+                    android:text="تاریخ ثبت" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/iconTvTime"
+                    style="@style/rowImageView"
+                    card_view:srcCompat="@drawable/ic_time" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgDeleteNote"
+                android:layout_width="17dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                card_view:srcCompat="@drawable/delete" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

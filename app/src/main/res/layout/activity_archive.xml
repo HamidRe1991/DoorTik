@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Dialog.ArchiveActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="آرشیو آگهی"
+        android:textColor="@color/mainColor"
+        android:textSize="@dimen/toolbarTextSize" />
+
+    <RadioGroup
+        android:id="@+id/rdbGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:padding="20dp">
+
+        <RadioButton
+            android:id="@+id/rdbExpire"
+            style="@style/radioButtonStyle"
+            android:layout_width="match_parent"
+            android:textSize="@dimen/postTextSize"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="انقضای آگهی" />
+
+        <RadioButton
+            android:id="@+id/rdbCommission"
+            style="@style/radioButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/postTextSize"
+            android:text="ثبت کمیسیون" />
+
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/rltCommission"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/rdbGroup">
+
+        <TextView
+            android:id="@+id/txtFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="کمیسیون:"
+            android:textSize="@dimen/postTextSize"
+            android:textColor="@color/textColor" />
+
+        <wiadevelopers.com.library.MaskdEditText.MaskedEditText xmlns:mask="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/edtCommission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@+id/txtFrom"
+            android:gravity="center"
+            android:inputType="phone"
+            android:enabled="false"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/postTextSize"
+            mask:mask="###,###,###,###" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rltCommission"
+        android:layout_marginTop="20dp"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btnCloseExpire"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/selector_white_blue"
+            android:textSize="@dimen/postTextSize"
+            android:text="انصراف" />
+
+        <Button
+            android:id="@+id/btnSubmitExpire"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textSize="@dimen/postTextSize"
+            android:background="@drawable/selector_white_blue"
+            android:text="ثبت" />
+
+    </LinearLayout>
+
+</RelativeLayout>

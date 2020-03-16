@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/rltFilter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="0.1"
+        android:background="@drawable/filter_box"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/imgFilter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:tint="@color/textColor"
+            app:srcCompat="@drawable/ic_filter" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:layout_weight="0.9"
+        android:background="@drawable/filter_box"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgVoiceSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:padding="3dp"
+            app:srcCompat="@drawable/voice" />
+
+        <EditText
+            android:id="@+id/edtVoiceSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.9"
+            android:background="@drawable/filter_text_box"
+            android:gravity="right|center_vertical"
+            android:hint="جستجو..."
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingRight="10dp"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/searchTextSize" />
+
+    </LinearLayout>
+
+</LinearLayout>

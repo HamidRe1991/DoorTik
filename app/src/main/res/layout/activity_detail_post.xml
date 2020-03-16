@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.DetailPostActivity">
+
+    <RelativeLayout
+        android:id="@+id/rltContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <wiadevelopers.com.library.MaterialLoading.MaterialProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.MaterialProgressBar.ProgressBar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal|bottom"
+            android:indeterminate="true"
+            app:mpb_indeterminateTint="@color/mainColor" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="?actionBarSize">
+
+            <include
+                android:id="@+id/viewNoInternetConnection"
+                layout="@layout/view_no_internet_connection" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/margin"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/crdTools"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="5dp"
+                card_view:cardPreventCornerOverlap="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="1">
+
+                    <Button
+                        android:id="@+id/btnFirst"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/selector_white_blue"
+                        android:text="پیشنهادات"
+                        android:textSize="@dimen/detailTitleSize"
+                        android:textColor="@color/textColor" />
+
+                    <Button
+                        android:id="@+id/btnArchive"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:textSize="@dimen/detailTitleSize"
+                        android:background="@drawable/selector_white_blue"
+                        android:text="آرشیو"
+                        android:textColor="@color/textColor" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="5dp"
+                card_view:cardPreventCornerOverlap="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/btnMap"
+                        android:layout_width="0dp"
+                        android:textSize="@dimen/detailTitleSize"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/selector_white_blue"
+                        android:text="نمایش ملک بر روی نقشه"
+                        android:textColor="@color/textColor" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardPreventCornerOverlap="false">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:maxLines="2"
+                        android:text="عنوان"
+                        android:textColor="@color/mainColor"
+                        android:textSize="@dimen/detailTitleSize" />
+
+                    <TextView
+                        android:id="@+id/txtPublic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtTitle"
+                        android:layout_marginTop="5dp"
+                        android:gravity="right"
+                        android:text="عمومی"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/detailTitleSize" />
+
+                    <TextView
+                        android:id="@+id/txtType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtPublic"
+                        android:layout_marginTop="5dp"
+                        android:gravity="right"
+                        android:text="نوع"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/detailTextSize" />
+
+                    <TextView
+                        android:id="@+id/txtPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtType"
+                        android:layout_marginTop="5dp"
+                        android:gravity="right"
+                        android:text="قیمت"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/detailTextSize" />
+
+                    <TextView
+                        android:id="@+id/txtDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/txtPrice"
+                        android:layout_alignParentRight="true"
+                        android:text="زمان"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/detailTextSize" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="8dp">
+
+                <LinearLayout
+                    android:id="@+id/lnrContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <com.smarteist.autoimageslider.SliderLayout
+        android:id="@+id/imageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/darkGray"
+        app:animateIndicators="true" />
+
+    <RelativeLayout
+        android:id="@+id/include"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <View
+            android:id="@+id/transState"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="1"
+            android:background="@drawable/fade_actionbar"
+            android:clickable="true"
+            android:visibility="visible" />
+
+        <View
+            android:id="@+id/colorState"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:background="@color/mainColor"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:padding="13dp"
+            app:srcCompat="@drawable/ic_vector_back" />
+
+        <ImageView
+            android:id="@+id/imgDelete"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:padding="13dp"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_delete" />
+
+        <ImageView
+            android:id="@+id/imgEdit"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/imgDelete"
+            android:clickable="true"
+            android:padding="13dp"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_edit" />
+
+        <ImageView
+            android:id="@+id/imgShare"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/imgEdit"
+            android:clickable="true"
+            android:padding="13dp"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic_share" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_action_bar_contact"
+        app:borderWidth="0dp"
+        app:elevation="5dp"
+        app:layout_anchorGravity="bottom|right|end"
+        app:rippleColor="@color/blueLight" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="?actionBarSize" />
+
+</android.support.design.widget.CoordinatorLayout>

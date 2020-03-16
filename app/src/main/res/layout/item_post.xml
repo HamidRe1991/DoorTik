@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/crdRoot"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/itemPostSize"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="8dp"
+    android:orientation="vertical"
+    card_view:cardCornerRadius="20dp"
+    card_view:cardPreventCornerOverlap="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/imgPic"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="3dp">
+
+            <TextView
+                android:id="@+id/tvRowTitle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:maxLines="2"
+                android:text="عنوان"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/rowTitleSize" />
+
+            <LinearLayout
+                android:id="@+id/lnrType"
+                style="@style/rowLinearLayout"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="65dp">
+
+                <TextView
+                    android:id="@+id/tvRowType"
+                    style="@style/rowTextView"
+                    android:text="نوع معامله" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/iconTvType"
+                    style="@style/rowImageView"
+                    card_view:srcCompat="@drawable/ic_beenhere" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrPrice"
+                style="@style/rowLinearLayout"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="35dp">
+
+                <TextView
+                    android:id="@+id/tvRowPrice"
+                    style="@style/rowTextView"
+                    android:text="قیمت" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/iconTvPrice"
+                    style="@style/rowImageView"
+                    card_view:srcCompat="@drawable/ic_money" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrTime"
+                style="@style/rowLinearLayout"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tvRowTime"
+                    style="@style/rowTextView"
+                    android:text="تاریخ ثبت" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/iconTvTime"
+                    style="@style/rowImageView"
+                    card_view:srcCompat="@drawable/ic_time" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/imgPic"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_post_no_image"
+            app:riv_corner_radius_bottom_left="20dp"
+            app:riv_corner_radius_bottom_right="0dp"
+            app:riv_corner_radius_top_left="20dp"
+            app:riv_corner_radius_top_right="0dp"
+            app:riv_mutate_background="true" />
+
+        <View
+            android:id="@+id/viewColor"
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/imgPic"
+            android:background="@color/type_expire" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

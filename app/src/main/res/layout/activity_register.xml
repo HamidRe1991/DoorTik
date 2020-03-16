@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rtlProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgRegisterProfile"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:background="@drawable/register_profile" />
+
+                <ImageView
+                    android:id="@+id/ivMiniCamere"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/register_select_profile"
+                    android:visibility="visible"/>
+
+            </RelativeLayout>
+            <!--  //1 -->
+            <LinearLayout
+                android:id="@+id/toggle"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/rtlProfile"
+                android:gravity="center_vertical|right"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/shape_toggle_register"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Consultant"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:background="@drawable/selector_toggle_register"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="مشاور"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:id="@+id/state"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/mainColor"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="املاکی"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvSelectCity"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/toggle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center_vertical|right"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="استان *"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/registerInputTextSize"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/edtRegisterName"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/tvSelectCity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center_vertical|right"
+                android:hint="نام دفتر املاک *"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/registerInputTextSize"
+                android:visibility="gone"/>
+            <EditText
+                android:id="@+id/edtConsultName"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/tvSelectCity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center_vertical|right"
+                android:hint="نام دفتر املاکی *"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/registerInputTextSize"
+                android:visibility="visible"/>
+            <EditText
+                android:id="@+id/edtConsultFamily"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/edtConsultName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center_vertical|right"
+                android:hint="نام مدیر املاک"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/registerInputTextSize"
+                android:visibility="visible"/>
+            <Spinner
+                android:id="@+id/spnCity"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/edtConsultFamily"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center_vertical|right"
+                android:hint="نام شهر *"
+
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/registerInputTextSize"
+                android:visibility="visible"/>
+            <Spinner
+                android:id="@+id/spnَArea"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/spnCity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center_vertical|right"
+                android:hint="نام منطقه *"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/registerInputTextSize"
+                android:visibility="visible"/>
+            <Spinner
+                android:id="@+id/spnConsultStateName"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/spnَArea"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center_vertical|right"
+                android:hint="نام املاکی *"
+                android:inputType="text"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/registerInputTextSize"
+                android:visibility="gone"/>
+
+
+            <EditText
+                android:id="@+id/edtRegisterEmail"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/spnConsultStateName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center_vertical|left"
+                android:hint="ایمیل"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/registerInputTextSize"
+                android:visibility="visible"/>
+
+            <EditText
+                android:id="@+id/edtRegisterTell"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/edtRegisterEmail"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center_vertical|left"
+                android:hint="شماره تماس ثابت"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/registerInputTextSize"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/edtRegisterAddress"
+                android:layout_width="200dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/edtRegisterTell"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center_vertical|right"
+                android:hint="آدرس *"
+                android:inputType="textMultiLine"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/registerInputTextSize"
+                android:visibility="visible"/>
+
+            <EditText
+                android:id="@+id/edtRegisterPass"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/edtRegisterAddress"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center_vertical|left"
+                android:hint="رمز عبور *"
+                android:maxLength="11"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/registerInputTextSize" />
+
+            <EditText
+                android:id="@+id/edtRegisterCode"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/edtRegisterPass"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/edit_text_background"
+                android:gravity="center"
+                android:hint="کد معرفی"
+                android:inputType="text"
+                android:maxLength="15"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/registerInputTextSize"
+                android:visibility="visible"/>
+
+            <LinearLayout
+                android:id="@+id/lnrLocation"
+                style="@style/locationLinearLayout"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtRegisterCode"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/linear_background"
+                android:gravity="center"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvRegisterLoc"
+                    style="@style/locationTextView"
+                    android:text="لوکیشن خود را وارد نمایید"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    style="@style/locationImageView"
+                    android:background="@drawable/location"
+                    android:backgroundTint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnrNumber"
+                style="@style/locationLinearLayout"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lnrLocation"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/linear_background"
+                android:gravity="center"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tvNumber"
+                    style="@style/locationTextView"
+                    android:text="تصویر جواز خود را آپلود کنید"
+                    android:textColor="@color/white"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lnrNumber"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="پس از تایید جواز برچسب املاک مجاز در پروفایلتان نمایش داده می شود!"
+                android:textColor="@color/error"
+                android:textSize="@dimen/registerErrorTextSize"
+                android:visibility="visible"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDesc"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/register_button"
+                    android:clickable="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="تکمیل پروفایل"
+                    android:textSize="@dimen/registerTitleTextSize" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

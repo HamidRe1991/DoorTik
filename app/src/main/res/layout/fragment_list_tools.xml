@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/toolsLnrRow"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:id="@+id/toolsLnrAlign"
+                style="@style/toolsLnrHoldToolsItems"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="49"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/toolsImgAlign"
+                    style="@style/toolsImgTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="70"
+                    app:srcCompat="@drawable/ic_tools_align" />
+
+                <TextView
+                    android:id="@+id/toolsTxtAlign"
+                    style="@style/toolsTxtTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="30"
+                    android:text="تراز" />
+
+            </LinearLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/toolsLnrFinancial"
+                style="@style/toolsLnrHoldToolsItems"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="49"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/toolsImgFinancial"
+                    style="@style/toolsImgTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="70"
+                    app:srcCompat="@drawable/ic_tools_money" />
+
+                <TextView
+                    android:id="@+id/toolsTxtFinancial"
+                    style="@style/toolsTxtTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="30"
+                    android:text="دستیار مالی" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/toolsLnrRow"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:id="@+id/toolsLnrBarcode"
+                style="@style/toolsLnrHoldToolsItems"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="49"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/toolsImgBarcode"
+                    style="@style/toolsImgTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="70"
+                    app:srcCompat="@drawable/ic_tools_barcode" />
+
+                <TextView
+                    android:id="@+id/toolsTxtBarcode"
+                    style="@style/toolsTxtTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="30"
+                    android:text="بارکد خوان" />
+
+            </LinearLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/toolsLnrFlash"
+                style="@style/toolsLnrHoldToolsItems"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="49"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/toolsImgFlash"
+                    style="@style/toolsImgTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="70"
+                    app:srcCompat="@drawable/ic_tools_highlight" />
+
+                <TextView
+                    android:id="@+id/toolsTxtFlash"
+                    style="@style/toolsTxtTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="30"
+                    android:text="چراغ قوه" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/toolsLnrRow"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:id="@+id/toolsLnrRSS"
+                style="@style/toolsLnrHoldToolsItems"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="49"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/toolsImgRSS"
+                    style="@style/toolsImgTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="70"
+                    app:srcCompat="@drawable/ic_tools_rss" />
+
+                <TextView
+                    android:id="@+id/toolsTxtRSS"
+                    style="@style/toolsTxtTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="30"
+                    android:text="خبر خوان" />
+
+            </LinearLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/toolsLnrCalc"
+                style="@style/toolsLnrHoldToolsItems"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="49"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/toolsImgCalc"
+                    style="@style/toolsImgTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="70"
+                    app:srcCompat="@drawable/ic_tools_calculator" />
+
+                <TextView
+                    android:id="@+id/toolsTxtCalc"
+                    style="@style/toolsTxtTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="30"
+                    android:text="محاسبات" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/toolsLnrRow"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:id="@+id/toolsLnrEvent"
+                style="@style/toolsLnrHoldToolsItems"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="49"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/toolsImgEvent"
+                    style="@style/toolsImgTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="70"
+                    app:srcCompat="@drawable/ic_tools_event" />
+
+                <TextView
+                    android:id="@+id/toolsTxtEvent"
+                    style="@style/toolsTxtTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="30"
+                    android:text="یادداشت" />
+
+            </LinearLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:id="@+id/toolsLnrCalender"
+                style="@style/toolsLnrHoldToolsItems"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="49"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/toolsImgCalender"
+                    style="@style/toolsImgTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="70"
+                    app:srcCompat="@drawable/ic_tools_calendar" />
+
+                <TextView
+                    android:id="@+id/toolsTxtCalender"
+                    style="@style/toolsTxtTools"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="30"
+                    android:text="تقویم" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

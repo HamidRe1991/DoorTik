@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/filter">
+
+        </include>
+
+        <wiadevelopers.com.library.ExpandableLayout.ExpandableLayout
+            android:id="@+id/expandLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:el_expanded="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:id="@+id/txtFrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="از"
+                        android:textSize="@dimen/filterTitleSize"
+                        android:textColor="@color/textColor" />
+
+                    <EditText
+                        android:id="@+id/edtFrom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/txtFrom"
+                        android:background="@drawable/selector_edit_text"
+                        android:enabled="true"
+                        android:gravity="left|bottom"
+                        android:inputType="phone"
+                        android:paddingBottom="8dp"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/filterTextSize" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:id="@+id/txtTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="تا"
+                        android:textSize="@dimen/filterTitleSize"
+                        android:textColor="@color/textColor" />
+
+                    <EditText
+                        android:id="@+id/edtTo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/txtTo"
+                        android:background="@drawable/selector_edit_text"
+                        android:gravity="left|bottom"
+                        android:inputType="phone"
+                        android:paddingBottom="8dp"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/filterTextSize" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </wiadevelopers.com.library.ExpandableLayout.ExpandableLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

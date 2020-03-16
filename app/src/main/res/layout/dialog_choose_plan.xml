@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="2dp">
+
+    <Switch
+        android:id="@+id/switchPublic"
+        android:text="نمایش آگهی تنها برای خودم"
+        android:textColor="@color/textColor"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:gravity="center"
+        android:textSize="@dimen/postTextSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/txtError"
+        android:textColor="@color/error"
+        android:textSize="@dimen/postTextSize"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_below="@id/switchPublic"
+        android:text="پس از تایید جواز املاک قابلیت ثبت ملک به صورت عمومی فعال می شود"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/txtError"
+        android:background="@color/backgroundColor" />
+
+    <RadioGroup
+        android:id="@+id/lnrContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/space"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        android:gravity="right"
+        android:padding="8dp">
+
+        <RadioButton
+            android:id="@+id/rdbFree"
+            style="@style/radioButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:enabled="false"
+            android:gravity="right|center_vertical"
+            android:text="عادی"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/postTextSize" />
+
+        <RadioButton
+            android:id="@+id/rdbCostVip"
+            style="@style/radioButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:gravity="right|center_vertical"
+            android:text="ویژه (20 دربن)"
+            android:textColor="@color/textColor"
+            android:textSize="@dimen/postTextSize" />
+
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/spaces"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/lnrContainer"
+        android:background="@color/backgroundColor" />
+
+    <RelativeLayout
+        android:id="@+id/rltContainer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/spaces"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtPay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/selector_white_blue"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="ثبت"
+            android:textColor="@color/mainColor"
+            android:textSize="@dimen/postTextSize" />
+
+        <TextView
+            android:id="@+id/txtCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/txtPay"
+            android:background="@drawable/selector_white_blue"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="انصراف"
+            android:textColor="@color/mainColor"
+            android:textSize="@dimen/postTextSize" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorDialog"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout>

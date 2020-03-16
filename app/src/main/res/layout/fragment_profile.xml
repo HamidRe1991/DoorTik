@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/lnrProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/register_profile"
+                        android:visibility="visible"/>
+
+                    <ImageView
+                        android:id="@+id/imgLicense"
+                        android:layout_width="40dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/license"
+                        android:visibility="visible"/>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="0.5">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="تعداد دربن:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/profileItemTextSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.5">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="زمان ثبت آگهی:"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/profileItemTextSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:id="@+id/lnrCoin"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/profile_item_background">
+
+                        <TextView
+                            android:id="@+id/tvCoin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/profileMiniItemTextSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnrCredit"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/profile_item_background">
+
+                        <TextView
+                            android:id="@+id/tvCredit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/profileMiniItemTextSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:id="@+id/lnrBuyCoin"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/buy_item_background">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="خرید دربن"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/profileMiniItemTextSize" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnrBuyCredit"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/buy_item_background">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="دریافت زمان"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/profileMiniItemTextSize" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="با دعوت از املاکی های دیگر 150 دربن رایگان دریافت کنید"
+                    android:textColor="@color/error"
+                    android:textSize="@dimen/profileMiniItemTextSize" />
+                <LinearLayout
+                    android:id="@+id/lnrRequest"
+                    style="@style/profileLinearRequest"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvProfileRequests"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="بررسی درخواست های مشاوران"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/profileItemTextSize"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:id="@+id/lnrCode"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="0.7"
+                        android:background="@drawable/profile_item_background">
+
+                        <TextView
+                            android:id="@+id/tvCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/profileMiniItemTextSize" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_weight="0.3"
+                        android:gravity="right|center_vertical"
+                        android:text="کد معرفی:"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/profileItemTextSize" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnrName"
+                    style="@style/profileLinearLayout">
+
+                    <TextView
+                        android:id="@+id/tvProfileName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:hint="نام دفتر املاک"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/profileItemTextSize" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/lnrFamily"
+                    style="@style/profileLinearLayout"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvProfileFamliy"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:hint="نام دفتر املاک"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/profileItemTextSize" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lnrMobile"
+                    style="@style/profileLinearLayout">
+
+                    <TextView
+                        android:id="@+id/tvProfileMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:hint="شماره موبایل"
+                        android:textColor="@color/textColor"
+                        android:textSize="@dimen/profileItemTextSize" />
+                    <ImageView
+                        android:id="@+id/profileImgMob"
+                        style="@style/profileImageView"
+                        app:srcCompat="@drawable/tell" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnrState"
+                    style="@style/profileLinearLayout"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvProfileState"
+                        style="@style/profileTextView"
+                        android:hint="استان" />
+
+                    <ImageView
+                        android:id="@+id/profileImgState"
+                        style="@style/profileImageView"
+                        app:srcCompat="@drawable/state" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnrEmail"
+                    style="@style/profileLinearLayout">
+
+                    <TextView
+                        android:id="@+id/tvProfileEmail"
+                        style="@style/profileTextView"
+                        android:hint="آدرس ایمیل" />
+
+                    <ImageView
+                        android:id="@+id/profileImgEmail"
+                        style="@style/profileImageView"
+                        app:srcCompat="@drawable/email" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnrTell"
+                    style="@style/profileLinearLayout"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvProfileTell"
+                        style="@style/profileTextView"
+                        android:hint="شماره تماس ثابت" />
+
+                    <ImageView
+                        android:id="@+id/profileImgTell"
+                        style="@style/profileImageView"
+                        app:srcCompat="@drawable/tell" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnrAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/profile_item_background"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvProfileAddress"
+                        style="@style/profileTextView"
+                        android:hint="آدرس" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/lnrShowLocation"
+                        style="@style/locationLinearLayout"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/linear_background"
+                        android:gravity="center"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tvUpdateLoc"
+                            style="@style/locationTextView"
+                            android:text="نمایش موقعیت مکانی"
+                            android:textColor="@color/white" />
+
+                        <ImageView
+                            style="@style/locationImageView"
+                            android:background="@drawable/location"
+                            android:backgroundTint="@color/white" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnExitProfile"
+                            android:layout_width="75dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/profile_exit" />
+
+                        <Button
+                            android:id="@+id/btnEditProfile"
+                            android:layout_width="90dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/profile_edit" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

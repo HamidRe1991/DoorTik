@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lnrContainer"
+        style="@style/createPostItem"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/cpTextViewTitle"
+            android:text="TextView" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:paddingRight="8dp">
+
+            <RadioButton
+                android:id="@+id/rdBtn1"
+                style="@style/radioButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:gravity="right|center_vertical"
+                android:text="RadioButton"
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/postTextSize" />
+
+            <RadioButton
+                android:id="@+id/rdBtn2"
+                style="@style/radioButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:text="RadioButton"
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/postTextSize" />
+
+            <RadioButton
+                android:id="@+id/rdBtn3"
+                style="@style/radioButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:text="RadioButton"
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/postTextSize" />
+
+            <RadioButton
+                android:id="@+id/rdBtn4"
+                style="@style/radioButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:text="RadioButton"
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/postTextSize" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</LinearLayout>

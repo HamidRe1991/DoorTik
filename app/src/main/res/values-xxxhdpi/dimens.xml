@@ -1,0 +1,76 @@
+<resources>
+
+    <!-- Login Text -->
+    <dimen name="LoginTitleTextSize">20sp</dimen>
+    <dimen name="LoginInputTextSize">21sp</dimen>
+
+    <!-- Register Text -->
+    <dimen name="registerTitleTextSize">20sp</dimen>
+    <dimen name="registerInputTextSize">21sp</dimen>
+    <dimen name="registerErrorTextSize">19sp</dimen>
+
+    <!-- Select City Text -->
+    <dimen name="cityTitleTextSize">24sp</dimen>
+    <dimen name="cityInputTextSize">20sp</dimen>
+
+    <!-- Toolbar -->
+    <dimen name="toolbarTextSize">22sp</dimen>
+
+    <!-- Profile Page -->
+    <dimen name="profileItemTextSize">21sp</dimen>
+    <dimen name="profileMiniItemTextSize">19sp</dimen>
+    <dimen name="profileRadiusSize">40dp</dimen>
+
+    <!-- Buy Page -->
+    <dimen name="buyItemTextSize">20sp</dimen>
+    <dimen name="buyTitleTextSize">22sp</dimen>
+
+    <!-- Tools Page -->
+    <dimen name="toolsTextSize">20sp</dimen>
+
+    <!-- Financial Page -->
+    <dimen name="financialTextSize">20sp</dimen>
+
+    <!-- RSS Page -->
+    <dimen name="rssTitleSize">22sp</dimen>
+    <dimen name="rssTextSize">20sp</dimen>
+
+    <!-- Calculator Page -->
+    <dimen name="calculatorBoldSize">30sp</dimen>
+    <dimen name="calculatorMiniBoldSize">28sp</dimen>
+    <dimen name="calculatorSize">20sp</dimen>
+    <dimen name="historySize">20sp</dimen>
+
+    <!-- Calender Page -->
+    <dimen name="calenderTitleSize">23sp</dimen>
+    <dimen name="calenderTextSize">21sp</dimen>
+
+    <!-- Event Page -->
+    <dimen name="eventTextSize">20sp</dimen>
+
+    <!-- Filter Page -->
+    <dimen name="filterTitleSize">20sp</dimen>
+    <dimen name="filterTextSize">18sp</dimen>
+
+    <!-- Post Page -->
+    <dimen name="postTextSize">18sp</dimen>
+
+    <!-- Category Page -->
+    <dimen name="categoryTitleSize">20sp</dimen>
+    <dimen name="categoryTextSize">16sp</dimen>
+
+    <!-- Search Page -->
+    <dimen name="searchTextSize">20sp</dimen>
+
+    <!-- row -->
+    <dimen name="rowTitleSize">22sp</dimen>
+    <dimen name="rowTextSize">18sp</dimen>
+
+    <!-- Detail Page -->
+    <dimen name="detailTitleSize">20sp</dimen>
+    <dimen name="detailTextSize">18sp</dimen>
+
+    <!-- Bottom Navigation -->
+    <dimen name="bottomNavigationSize">20dp</dimen>
+
+</resources>
